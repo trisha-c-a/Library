@@ -1,0 +1,168 @@
+/* Font still applies */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+  font-family: 'Merriweather', Georgia, serif;
+  background: linear-gradient(to bottom, #e0f2e9, #cfe8dc); /* Cozy green gradient */
+  color: #3e3e3e;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  color: #3a4f41;
+  margin-bottom: 1rem;
+}
+
+/* Add Book Button */
+#add-book-btn {
+  background-color: #5e8c61; /* Olive green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#add-book-btn:hover {
+  background-color: #4a7150;
+}
+
+/* Book card background (warmer green-paper tone) */
+.book-card {
+  position: relative;
+  background-color: #f4f8f4; /* soft off-white/green tone */
+  border: 1px solid #c8d8c0;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+}
+
+.book-card h3 {
+  margin-top: 0;
+  color: #3e5e47;
+}
+
+/* Remove button */
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: #a94442;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  color: #7d2b2b;
+}
+
+/* Toggle Read Button */
+.toggle-read-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+/* Toggle read button colors are set dynamically in JS */
+
+/* Read/Unread text colors */
+.read-status {
+  font-weight: bold;
+  color: #2d7c2d;
+}
+
+.not-read {
+  font-weight: bold;
+  color: #b22222;
+}
+
+/* Error message */
+#error-message {
+  background-color: #ffe6e6;
+  border: 1px solid red;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: #a00;
+}
+
+#form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#book-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+#book-form input[type="text"],
+#book-form input[type="number"] {
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+#book-form label {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  gap: 0.3rem;
+}
+
+#book-form input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+#book-form button[type="submit"] {
+  background-color: #5e8c61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Layout */
+#library-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
