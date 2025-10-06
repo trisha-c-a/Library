@@ -1,9 +1,8 @@
-/* Font still applies */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 body {
   font-family: 'Merriweather', Georgia, serif;
-  background: linear-gradient(to bottom, #e0f2e9, #cfe8dc); /* Cozy green gradient */
+  background: linear-gradient(to bottom, #e0f2e9, #cfe8dc);
   color: #3e3e3e;
   margin: 0;
   padding: 2rem;
@@ -22,7 +21,7 @@ h1 {
 
 /* Add Book Button */
 #add-book-btn {
-  background-color: #5e8c61; /* Olive green */
+  background-color: #5e8c61;
   color: white;
   border: none;
   border-radius: 5px;
@@ -38,10 +37,9 @@ h1 {
   background-color: #4a7150;
 }
 
-/* Book card background (warmer green-paper tone) */
 .book-card {
   position: relative;
-  background-color: #f4f8f4; /* soft off-white/green tone */
+  background-color: #f4f8f4;
   border: 1px solid #c8d8c0;
   border-radius: 10px;
   padding: 1rem;
@@ -87,9 +85,6 @@ h1 {
   transition: background-color 0.3s;
 }
 
-/* Toggle read button colors are set dynamically in JS */
-
-/* Read/Unread text colors */
 .read-status {
   font-weight: bold;
   color: #2d7c2d;
@@ -157,7 +152,10 @@ h1 {
   cursor: pointer;
 }
 
-/* Layout */
+.hidden {
+  display: none !important;
+}
+
 #library-container {
   display: flex;
   flex-wrap: wrap;
@@ -166,3 +164,4 @@ h1 {
   width: 100%;
   max-width: 1200px;
 }
+

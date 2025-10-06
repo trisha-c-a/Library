@@ -98,7 +98,6 @@ body.appendChild(addBookBtn);
 // Form to receive new book data
 const form = document.createElement('form');
 form.id = 'book-form';
-form.style.display = 'none';
 form.style.marginTop = '1rem';
 form.innerHTML = `
   <input type="text" id="title" placeholder="Title" required>
@@ -107,14 +106,17 @@ form.innerHTML = `
   <label><input type="checkbox" id="read"> Read</label>
   <button type="submit">Add Book</button>
 `;
-form.style.display = 'flex';
 form.style.flexWrap = 'wrap';
 form.style.gap = '1rem';
 form.style.justifyContent = 'center';
 form.style.alignItems = 'center';
 form.style.marginBottom = '2rem';
 
-body.appendChild(form);
+const formContainer = document.createElement('div');
+formContainer.id = 'form-container';
+formContainer.classList.add('hidden'); // hidden by default
+formContainer.appendChild(form);
+body.appendChild(formContainer);
 
 // Library Container
 const libraryContainer = document.createElement('div');
@@ -133,7 +135,7 @@ body.appendChild(errorMessage);
 
 // Event listener to add new books
 addBookBtn.addEventListener('click', () => {
-  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  formContainer.classList.toggle('hidden');
   errorMessage.style.display = 'none';
 });
 
